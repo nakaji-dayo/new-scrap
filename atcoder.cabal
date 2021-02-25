@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 62a59b4987891f58bcfdd88666712ab97c48b1f785677c8358d93736262367cb
+-- hash: 6434dda063645c5a8a6adda65190f79839b42567402cb833b870c56b364df638
 
 name:           atcoder
 version:        0.1.0.0
@@ -28,8 +28,10 @@ source-repository head
 library
   exposed-modules:
       ABC086A
+      ABC087B
       Lib
       PracticeA
+      Util
   other-modules:
       Paths_atcoder
   hs-source-dirs:
