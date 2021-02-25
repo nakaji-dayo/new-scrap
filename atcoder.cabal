@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 6434dda063645c5a8a6adda65190f79839b42567402cb833b870c56b364df638
+-- hash: 36cc3e048cc92bbf092a44d4853d472e20df15a80e5820598e82d21250a87024
 
 name:           atcoder
 version:        0.1.0.0
@@ -29,6 +29,7 @@ library
   exposed-modules:
       ABC086A
       ABC087B
+      ABC088B
       Lib
       PracticeA
       Util
