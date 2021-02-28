@@ -1,0 +1,60 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: cf994bf41a1ad48707229c77bfbb9f9f7c7f0ed028004e7fc09e131bb51c5b9a
+
+name:           new-scraps
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/new-scraps#readme>
+homepage:       https://github.com/githubuser/new-scraps#readme
+bug-reports:    https://github.com/githubuser/new-scraps/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2021 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/new-scraps
+
+library
+  exposed-modules:
+      ABC086A
+      ABC087B
+      ABC088B
+      ABC193A
+      Lib
+      PracticeA
+      Util
+  other-modules:
+      Paths_new_scraps
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+    , mtl
+    , text
+  default-language: Haskell2010
+
+test-suite new-scraps-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_new_scraps
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , mtl
+    , new-scraps
+    , text
+  default-language: Haskell2010
