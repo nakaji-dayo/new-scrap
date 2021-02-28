@@ -1,6 +1,7 @@
 module Q10M where
 
-import           Data.List   (sort)
+import qualified Data.IntSet as S
+import           Data.List   (foldl', sort)
 import           Data.Maybe  (catMaybes)
 import           Debug.Trace
 
@@ -11,9 +12,6 @@ data Move = U | D | L | R
 
 type Path = ([Move], Position)
 type Frontier = [Path]
-
-encode :: Position -> Int
-encode = undefined
 
 size = 3
 
@@ -51,15 +49,18 @@ swapl a b xs =
       | i == b = (aa:acc, aa, x)
       | otherwise = (x:acc, aa, ab)
 
-solve p = bfs [] [([], p)]
+solve p = bfs S.empty [([], p)] []
 
-bfs ps [] = Nothing
-bfs ps ((ms, p):mps)
+bfs :: S.IntSet -> Frontier -> Frontier -> Maybe [Move]
+bfs ps [] [] = Nothing
+bfs ps [] mqs = bfs ps mqs []
+bfs ps ((ms, p):mps) mqs
   | solved p = Just $ reverse ms
-  | p `elem` ps = bfs ps mps
-  | otherwise = bfs (p:ps) (mps ++ succs (ms, p))
+  | encode p `S.member` ps = bfs ps mps mqs
+  | otherwise = bfs (S.insert (encode p) ps) mps (succs (ms, p) ++ mqs)
 
 succs (ms, p) = [(m:ms, move p m) | m <- moves p]
 
-
+encode :: Position -> Int
+encode (_, cs) = fst $ foldl' (\(r, n) x -> (r + x*n, n*10)) (0, 1) cs
 -- todo...

@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: cf994bf41a1ad48707229c77bfbb9f9f7c7f0ed028004e7fc09e131bb51c5b9a
+-- hash: ac1635526374ae85fe195e5ae7fade9f58a4b1c64c8ceaa453c8fff9d283ee0b
 
 name:           new-scraps
 version:        0.1.0.0
@@ -40,6 +40,7 @@ library
       src
   build-depends:
       base >=4.7 && <5
+    , containers
     , mtl
     , text
   default-language: Haskell2010
@@ -54,6 +55,7 @@ test-suite new-scraps-test
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
+    , containers
     , mtl
     , new-scraps
     , text
