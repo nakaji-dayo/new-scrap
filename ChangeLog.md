@@ -1,3 +1,3 @@
-# Changelog for atcoder
+# Changelog for new-scraps
 
 ## Unreleased changes

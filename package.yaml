@@ -1,6 +1,6 @@
-name:                atcoder
+name:                new-scraps
 version:             0.1.0.0
-github:              "githubuser/atcoder"
+github:              "githubuser/new-scraps"
 license:             BSD3
 author:              "Author name here"
 maintainer:          "example@example.com"
@@ -17,17 +17,18 @@ extra-source-files:
 # To avoid duplicated efforts in documentation and dealing with the
 # complications of embedding Haddock markup inside cabal files, it is
 # common to point users to the README.md file.
-description:         Please see the README on GitHub at <https://github.com/githubuser/atcoder#readme>
+description:         Please see the README on GitHub at <https://github.com/githubuser/new-scraps#readme>
 
 dependencies:
 - base >= 4.7 && < 5
 - text
+- mtl
 
 library:
   source-dirs: src
 
 # executables:
-#   atcoder-exe:
+#   new-scraps-exe:
 #     main:                Main.hs
 #     source-dirs:         app
 #     ghc-options:
@@ -35,10 +36,10 @@ library:
 #     - -rtsopts
 #     - -with-rtsopts=-N
 #     dependencies:
-#     - atcoder
+#     - new-scraps
 
 tests:
-  atcoder-test:
+  new-scraps-test:
     main:                Spec.hs
     source-dirs:         test
     ghc-options:
@@ -46,4 +47,4 @@ tests:
     - -rtsopts
     - -with-rtsopts=-N
     dependencies:
-    - atcoder
+    - new-scraps
